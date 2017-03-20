@@ -1,0 +1,8 @@
+<사용법>
+1. github.com/WheFe/Whefe 에 가서 fork  :  내 remote(온라인) 저장소에 가져오는 것
+2. 내 remote 저장소에서 나의 local 저장소(내가 쓰는 컴퓨터)로 clone : 작업할 컴터로 가져오기
+3. 작업하고 변경사항이 생길 때마다 commit    :  변경사항을 저장하는 것 [변경사항에 대한 commit 메세지 꼭 적어야 함]
+4. 그 날 작업이 완료되면 push   :  commit 한 작업을 내 온라인 저장소에 올리는 작업
+
+
+pull request (모든 작업 WheFe에 병합하는 것) 은 일주일에 두번 정도만 진행하기
