@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <title>상세 메뉴 관리</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<style>
+ .navbar-nav {
+  font-size: 30px;
+ }
+
+ .btn-round {
+  border-radius: 17px;
+ }
+
+ .btn-round-sm {
+  border-radius: 15px;
+ }
+
+ .well-large {
+  height: 150px;
+  width: 800px;
+  border-radius: 17px;
+ }
+
+ .coupon-active-custom {
+background:#D9EDF7;
+border-radius: 17px;
+}
+.coupon-expired-custom {
+background:#F5F5F5;
+border-radius: 17px;
+}
+.btn-huge{
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+</style>
+
+<body>
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+   <div class="navbar-left" href="#">
+    <image src="C:\Users\jsg67\Desktop\WheFe\web-front-end\images\grazie-logo.jpg" class="img-circle" alt="그라지에 로고" width="80px" height="80px">
+   </div>
+
+   <ul class="nav navbar-nav">
+    <li><a href="#">&nbsp;메뉴관리&nbsp;</a></li>
+    <li class="active"><a href="#">&nbsp;쿠폰관리&nbsp;</a></li>
+    <li><a href="#">&nbsp;주문확인&nbsp;</a></li>
+   </ul>
+  </div>
+ </nav>
+
+ <div class="container">
+  <div class="panel panel-primary">
+   <div class="panel-heading">
+    <h4><b>쿠폰 관리<h4></b>
+   </div>
+
+
+     <div class="panel-body">
+       <div class="container-fluid">
+
+    <div class="row">
+      <div class="panel-body"><button type="button" class="btn btn-default btn-round-sm btn-sm"><h4><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;쿠폰 추가하기</h4></button>
+   </div>
+  </div>
+
+  <div class="row">
+   <div class="panel panel-default coupon-active-custom">
+    <div class="panel-body">
+     <div class="row">
+      <div class="col-md-9">
+       <div class="text-left">
+        <h3>
+      <ul>
+        <li>메뉴명 : 아메리카노
+        <li>기간 : 2017년 5월 3일 ~ 2017년 6월 2일
+        <li>할인금액 : 500원
+      </ul></h3>
+       </div>
+      </div>
+      <div class="col-md-3">
+
+
+      </div>
+     </div>
+    </div>
+  </div></div>
+
+  <div class="row">
+   <div class="panel panel-default coupon-expired-custom">
+    <div class="panel-body">
+     <div class="row">
+      <div class="col-md-9">
+       <div class="text-left">
+        <h3>
+      <ul>
+        <li>메뉴명 : 청포도 에이드
+        <li>기간 : 2017년 5월 3일 ~ 2017년 5월 7일
+        <li>할인금액 : 500원
+      </ul></h3>
+       </div>
+      </div>
+      <div class="col-md-3">
+
+       <button type="button" class="btn btn-danger btn-lg btn-huge btn-block"><span style="margin-bottom:20px margin-top:20px" class="glyphicon glyphicon-trash"></span>삭제</button>
+      </div>
+     </div>
+    </div>
+  </div></div>
+
+
+   </div>
+  </div>
+
+
+
+ </div>
+ </div>
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
