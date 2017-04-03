@@ -16,8 +16,24 @@
   border-radius: 17px;
  }
 
+ .btn-lg{
+   border-radius: 10px;
+   width: 190px;
+   height: 50px;
+ }
+
+
+ .btn-round-lg{
+   border-radius: 10px;
+   width: 400px;
+ }
+
  .btn-round-sm {
   border-radius: 15px;
+ }
+
+ #menu{
+   margin-top: 5px;
  }
 </style>
 
@@ -28,7 +44,7 @@
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>1
       </button>
     <a class="navbar-brand" href="#">WheFe</a>
    </div>
@@ -55,68 +71,61 @@
       <h4><b>메뉴 관리 (카테고리)<h4></b>
      </div>
 
+<div class="container">
     <div class="row">
       <div class="panel-body">
-        <button type="button" class="btn btn-default btn-round-sm btn-sm">
-          <h4><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;카테고리 추가하기</h4>
+        <button type="button" class="btn btn-default btn-round-lg btn-lg " style="border:0; text-align:left">
+          <h3><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;카테고리 추가하기</h3>
       </button>
      </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="menu">
      <div class="panel-body">
       <div class="row">
-       <div class="col-md-5">
-        <button type="button" class="btn btn-default btn-round-sm btn-sm"><h3><b>Coffee</b></h3></button>
+       <div class="col-lg-5">
+        <button type="button" class="btn btn-default btn-round-lg btn-lg">
+          <h4><b>Coffee</b></h4>
+        </button>
        </div>
-       <div class="col-md-2">
+
+       <div class="col-lg-2">
         <button type="button" class="btn btn-default btn-lg">옵션관리</button>
        </div>
-       <div class="col-md-2">
+       <div class="col-lg-2">
         <button type="button" class="btn btn-warning btn-lg"><span style="margin-right: 5px" class="glyphicon glyphicon-pencil"></span>이름 수정</button>
        </div>
-       <div class="col-md-2">
+       <div class="col-lg-2">
         <button type="button" class="btn btn-danger btn-lg"><span style="margin-right: 5px" class="glyphicon glyphicon-trash"></span>삭제</button>
        </div>
       </div>
      </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="menu">
      <div class="panel-body">
       <div class="row">
-       <div class="col-md-5">
-        <button type="button" class="btn btn-default btn-round-sm btn-sm"><h3><b>Tea</b></h3></button>
+       <div class="col-lg-5">
+        <button type="button" class="btn btn-default btn-round-lg btn-lg">
+          <h4><b>Ade</b></h4>
+        </button>
        </div>
-       <div class="col-md-2">
+
+       <div class="col-lg-2">
         <button type="button" class="btn btn-default btn-lg">옵션관리</button>
        </div>
-       <div class="col-md-2">
+       <div class="col-lg-2">
         <button type="button" class="btn btn-warning btn-lg"><span style="margin-right: 5px" class="glyphicon glyphicon-pencil"></span>이름 수정</button>
        </div>
-       <div class="col-md-2">
+       <div class="col-lg-2">
         <button type="button" class="btn btn-danger btn-lg"><span style="margin-right: 5px" class="glyphicon glyphicon-trash"></span>삭제</button>
        </div>
       </div>
      </div>
     </div>
-    <div class="row">
-     <div class="panel-body">
-      <div class="row">
-       <div class="col-md-5">
-        <button type="button" class="btn btn-default btn-round-sm btn-sm"><h3><b>Ade</b></h3></button>
-       </div>
-       <div class="col-md-2">
-        <button type="button" class="btn btn-default btn-lg">옵션관리</button>
-       </div>
-       <div class="col-md-2">
-        <button type="button" class="btn btn-warning btn-lg"><span style="margin-right: 5px" class="glyphicon glyphicon-pencil"></span>이름 수정</button>
-       </div>
-       <div class="col-md-2">
-        <button type="button" class="btn btn-danger btn-lg"><span style="margin-right: 5px" class="glyphicon glyphicon-trash"></span>삭제</button>
-       </div>
-      </div>
-     </div>
+
+
+
     </div>
    </div>
   </div>
