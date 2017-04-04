@@ -12,10 +12,10 @@
   font-size: 20px;
  }*/
 
- .option-button{
-   border-radius:10px;
-   width: 250px;
-   height: 50px;
+ .option-button {
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
  }
 
  .btn-round {
@@ -91,7 +91,7 @@
         <button type="button" class="btn btn-default btn-round-lg btn-lg" data-toggle="modal" data-target="#addCategory" style="border:0; text-align:left; vertical-align: middle">
           <b><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;옵션 추가하기</b>
         </button>
-        <!--카테고리 추가하기 팝업-->
+        <!--옵션 추가하기 팝업-->
         <div class="modal fade" id="addCategory" role="dialog">
             <div class="modal-dialog modal-sm">
 
@@ -111,8 +111,8 @@
 
    </div>
    <div class="modal-footer">
-    <button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#addOption_complete">카테고리 추가</button>
-    <!--카테고리 추가 완료-->
+    <button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#addOption_complete">옵션 추가</button>
+    <!--옵션 추가 완료-->
     <div class="modal" id="addOption_complete" role="dialog">
      <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -147,13 +147,109 @@
     </div>
 
     <div class="col-lg-2">
-     <button type="button" class="btn btn-default btn-lg" style="border:0">+500</button>
+     <button type="button" class="btn btn-default btn-lg" style="border:0"><b>+500</b></button>
     </div>
+
+    <!--옵션 수정-->
     <div class="col-lg-2">
-     <button type="button" class="btn btn-warning btn-lg"><span style="margin-right: 5px" class="glyphicon glyphicon-pencil"></span>이름 수정</button>
+     <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modify-name"><span style="margin-right: 5px" class="glyphicon glyphicon-pencil"></span>수정</button>
+     <!--옵션 수정하기 팝업-->
+     <div class="modal fade" id="modify-name" role="dialog">
+      <div class="modal-dialog modal-sm">
+
+       <!-- Modal content-->
+       <div class="modal-content">
+
+        <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">옵션 수정하기</h4>
+        </div>
+        <div class="modal-body">
+
+         <div class="container">
+          <div class="row">
+           <input class="form-control" style="max-width: 270px" name="option-name" placeholder="옵션이름" type="text" required autofocus />
+          </div>
+          <div class="row">
+           <input class="form-control" style="max-width: 270px" name="option-price" placeholder="가격" type="text" />
+          </div>
+         </div>
+
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#modify_option_complete">옵션 수정</button>
+         <!--이름 추가 완료-->
+         <div class="modal" id="modify_option_complete" role="dialog">
+          <div class="modal-dialog modal-sm">
+           <div class="modal-content">
+            <div class="modal-body">
+             <div class="row" style="text-align:center">
+              <b>옵션 수정 완료!</b>
+             </div>
+            </div>
+            <div class="modal-footer" data-dismiss="modal">
+             <button type="button" class="btn btn-default btn-md">확인</button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">취소</button>
+        </div>
+
+       </div>
+
+      </div>
+     </div>
+
     </div>
+
     <div class="col-lg-2">
-     <button type="button" class="btn btn-danger btn-lg"><span style="margin-right: 5px" class="glyphicon glyphicon-trash"></span>삭제</button>
+     <button type="button" class="btn btn-danger btn-lg" data-toggle="modal"  data-target="#delete-option"><span style="margin-right: 5px" class="glyphicon glyphicon-trash"></span>삭제</button>
+     <!--옵션 삭제하기 팝업-->
+     <div class="modal fade" id="delete-option" role="dialog">
+      <div class="modal-dialog modal-sm">
+
+       <!-- Modal content-->
+       <div class="modal-content">
+
+        <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">옵션 삭제하기</h4>
+        </div>
+        <div class="modal-body">
+
+         <div class="container">
+          <div class="row">
+           옵션을 삭제하시겠습니까?
+          </div>
+         </div>
+
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#delete_option_complete">옵션 삭제</button>
+         <!--이름 추가 완료-->
+         <div class="modal" id="delete_option_complete" role="dialog">
+          <div class="modal-dialog modal-sm">
+           <div class="modal-content">
+            <div class="modal-body">
+             <div class="row" style="text-align:center">
+              <b>옵션 삭제 완료!</b>
+             </div>
+            </div>
+            <div class="modal-footer" data-dismiss="modal">
+             <button type="button" class="btn btn-default btn-md">확인</button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">취소</button>
+        </div>
+
+       </div>
+
+      </div>
+     </div>
+
     </div>
    </div>
   </div>
@@ -169,17 +265,114 @@
     </div>
 
     <div class="col-lg-2">
-     <button type="button" class="btn btn-default btn-lg" style="border:0">+0</button>
+     <button type="button" class="btn btn-default btn-lg" style="border:0"><b>+0</b></button>
     </div>
+
+    <!--옵션 수정-->
     <div class="col-lg-2">
-     <button type="button" class="btn btn-warning btn-lg"><span style="margin-right: 5px" class="glyphicon glyphicon-pencil"></span>이름 수정</button>
+     <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modify-name"><span style="margin-right: 5px" class="glyphicon glyphicon-pencil"></span>수정</button>
+     <!--옵션 수정하기 팝업-->
+     <div class="modal fade" id="modify-name" role="dialog">
+      <div class="modal-dialog modal-sm">
+
+       <!-- Modal content-->
+       <div class="modal-content">
+
+        <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">옵션 수정하기</h4>
+        </div>
+        <div class="modal-body">
+
+         <div class="container">
+          <div class="row">
+           <input class="form-control" style="max-width: 270px" name="option-name" placeholder="옵션이름" type="text" required autofocus />
+          </div>
+          <div class="row">
+           <input class="form-control" style="max-width: 270px" name="option-price" placeholder="가격" type="text" />
+          </div>
+         </div>
+
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#modify_option_complete">옵션 수정</button>
+         <!--이름 추가 완료-->
+         <div class="modal" id="modify_option_complete" role="dialog">
+          <div class="modal-dialog modal-sm">
+           <div class="modal-content">
+            <div class="modal-body">
+             <div class="row" style="text-align:center">
+              <b>옵션 수정 완료!</b>
+             </div>
+            </div>
+            <div class="modal-footer" data-dismiss="modal">
+             <button type="button" class="btn btn-default btn-md">확인</button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">취소</button>
+        </div>
+
+       </div>
+
+      </div>
+     </div>
+
     </div>
+
     <div class="col-lg-2">
-     <button type="button" class="btn btn-danger btn-lg"><span style="margin-right: 5px" class="glyphicon glyphicon-trash"></span>삭제</button>
+     <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#delete-option"><span style="margin-right: 5px" class="glyphicon glyphicon-trash"></span>삭제</button>
+
+     <!--옵션 삭제하기 팝업-->
+     <div class="modal fade" id="delete-option" role="dialog">
+      <div class="modal-dialog modal-sm">
+
+       <!-- Modal content-->
+       <div class="modal-content">
+
+        <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">옵션 삭제하기</h4>
+        </div>
+        <div class="modal-body">
+
+         <div class="container">
+          <div class="row">
+           옵션을 삭제하시겠습니까?
+          </div>
+         </div>
+
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#delete_option_complete">옵션 삭제</button>
+         <!--이름 추가 완료-->
+         <div class="modal" id="delete_option_complete" role="dialog">
+          <div class="modal-dialog modal-sm">
+           <div class="modal-content">
+            <div class="modal-body">
+             <div class="row" style="text-align:center">
+              <b>옵션 삭제 완료!</b>
+             </div>
+            </div>
+            <div class="modal-footer" data-dismiss="modal">
+             <button type="button" class="btn btn-default btn-md">확인</button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">취소</button>
+        </div>
+
+       </div>
+
+      </div>
+     </div>
     </div>
    </div>
   </div>
  </div>
+
 
 
  </div>
