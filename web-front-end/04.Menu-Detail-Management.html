@@ -132,13 +132,65 @@
    <div class="row">
     <div class="col-lg-5">
      <button type="button" class="btn btn-default btn-round-lg btn-lg">
-               <h4><b>아메리카노</b></h4>
-             </button>
+        <h4><b>아메리카노</b></h4>
+      </button>
     </div>
 
     <div class="col-lg-2">
-     <button type="button" class="btn btn-default btn-lg">가격관리</button>
+     <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#price-management">가격관리</button>
     </div>
+    <!--가격 관리 팝업-->
+    <div class="modal fade" id="price-management" role="dialog">
+     <div class="modal-dialog modal-lg">
+      <!--Modal content-->
+      <div class="modal-content">
+       <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">가격 수정하기</h4>
+       </div>
+
+       <div class="modal-body">
+        <div class="container-fluid">
+         <!--가격 관리 표 삽입-->
+         <div class="table">
+          <table class="table">
+           <thead>
+            <tr>
+             <th></th>
+             <th>Small</th>
+             <th>Medium</th>
+             <th>Large</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <th scope="row">HOT</th>
+             <td>2,200</td>
+             <td>2,500</td>
+             <td>2,800</td>
+            </tr>
+            <tr>
+              <th scope="row">ICE</th>
+              <td>2,500</td>
+              <td>2,800</td>
+              <td>3,100</td>
+            </tr>
+           </tbody>
+          </table>
+         </div>
+        </div>
+       </div>
+
+       <div class="modal-footer" data-dismiss="modal">
+        <button type="button" class="btn btn-default btn-md" data-toggle="modal">메뉴 이름 수정</button>
+        <button type="button" class="btn btn-danger btn-md" data-toggle="modal">취소</button>
+       </div>
+      </div>
+     </div>
+    </div>
+
+
+
     <div class="col-lg-2">
      <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#menu-name-edit"><span style="margin-right: 5px" class="glyphicon glyphicon-pencil"></span>이름 수정</button>
      <!--메뉴 이름수정하기 팝업-->
@@ -240,12 +292,12 @@
    <div class="row">
     <div class="col-lg-5">
      <button type="button" class="btn btn-default btn-round-lg btn-lg">
-               <h4><b>카페 라떼</b></h4>
+               <h4><b>카페라떼</b></h4>
              </button>
     </div>
 
     <div class="col-lg-2">
-     <button type="button" class="btn btn-default btn-lg">옵션관리</button>
+     <button type="button" class="btn btn-default btn-lg">가격관리</button>
     </div>
     <div class="col-lg-2">
      <button type="button" class="btn btn-warning btn-lg"><span style="margin-right: 5px" class="glyphicon glyphicon-pencil"></span>이름 수정</button>
