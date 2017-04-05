@@ -31,6 +31,10 @@
 
  .btn-round-sm {
   border-radius: 15px;
+}
+  .price {
+    max-width: 100px;
+  }
  }
 </style>
 
@@ -76,29 +80,72 @@
        </div>
      </div>
      <div class="container">
-         <div class="row">
-           <div class="panel-body">
-             <button type="button" class="btn btn-default btn-round-lg btn-lg" data-toggle="modal" data-target="#addMenu" style="border:0; text-align:left">
-               <b><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;메뉴 추가하기</b>
-             </button>
-             <!--메뉴 추가하기 팝업-->
-             <div class="modal fade" id="addMenu" role="dialog">
-                 <div class="modal-dialog modal-sm">
+        <div class="row">
+          <div class="panel-body">
+            <button type="button" class="btn btn-default btn-round-lg btn-lg" data-toggle="modal" data-target="#addMenu" style="border:0; text-align:left">
+              <b><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;메뉴 추가하기</b>
+            </button>
+            <!--메뉴 추가하기 팝업-->
+            <div class="modal fade" id="addMenu" role="dialog">
+              <div class="modal-dialog modal-lg">
 
-                     <!-- Modal content-->
-                     <div class="modal-content">
+               <!-- Modal content-->
+               <div class="modal-content">
 
-                         <div class="modal-header">
-                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                             <h4 class="modal-title">메뉴 추가하기</h4>
+                 <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                       <h4 class="modal-title">메뉴 추가하기</h4>
    </div>
+
    <div class="modal-body">
-    <div class="container">
+    <div class="container-fluid">
      <div class="row">
-      <input class="form-control" style="max-width: 270px" name="category-name" placeholder="메뉴 이름" type="text" required autofocus />
+      <div class="input-group">
+       <span class="input-group-addon">메뉴 이름 입력</span>
+       <input id="menu-name" type="text" class="form-control" name="nemu-name" placeholder="추가할 메뉴 이름 입력">
+      </div>
+     </div>
+     <br/>
+     <div class="row">
+      <!--가격 관리 표 삽입-->
+      <div class="table">
+       <table class="table">
+        <thead>
+         <tr>
+          <th></th>
+          <th>Small</th>
+          <th>Medium</th>
+          <th>Large</th>
+          <th>사이즈 없음</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <th scope="row">HOT</th>
+          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+         </tr>
+         <tr>
+          <th scope="row">ICE</th>
+          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+         </tr>
+         <tr>
+          <th scope="row">단일 메뉴</th>
+          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
      </div>
     </div>
-
    </div>
    <div class="modal-footer">
     <button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#addMenu_complete">메뉴 추가</button>
@@ -170,10 +217,10 @@
              <td>2,800</td>
             </tr>
             <tr>
-              <th scope="row">ICE</th>
-              <td>2,500</td>
-              <td>2,800</td>
-              <td>3,100</td>
+             <th scope="row">ICE</th>
+             <td>2,500</td>
+             <td>2,800</td>
+             <td>3,100</td>
             </tr>
            </tbody>
           </table>
@@ -182,7 +229,7 @@
        </div>
 
        <div class="modal-footer" data-dismiss="modal">
-        <button type="button" class="btn btn-default btn-md" data-toggle="modal">메뉴 이름 수정</button>
+        <button type="button" class="btn btn-default btn-md" data-toggle="modal">가격 수정</button>
         <button type="button" class="btn btn-danger btn-md" data-toggle="modal">취소</button>
        </div>
       </div>
