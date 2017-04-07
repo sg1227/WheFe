@@ -19,6 +19,32 @@
   opacity: 0.7;
  }
 </style>
+<!--ID, 비밀번호 기억하기: 작동여부는 server 작업 후 확인-->
+<script>
+ $(function() {                 
+  if (localStorage.chkbx && localStorage.chkbx != '') {                    
+   $('#login-remember').attr('checked', 'checked');                    
+   $('#login-username').val(localStorage.usrname);                    
+   $('#login-password').val(localStorage.pass);                
+  } else {                    
+   $('#login-remember').removeAttr('checked');                    
+   $('#login-username').val('');                    
+   $('#login-password').val('');                
+  }                 
+  $('#login-remember').click(function() {                     
+   if ($('#login-remember').is(':checked')) {                         // save login-username and password
+                            
+    localStorage.usrname = $('#login-username').val();                        
+    localStorage.login-password = $('#pass').val();                        
+    localStorage.chkbx = $('#login-remember').val();                    
+   } else {                        
+    localStorage.usrname = '';                        
+    localStorage.login-password = '';                        
+    localStorage.chkbx = '';                    
+   }                
+  });            
+ });
+</script>
 
 <body>
  <div class="container">
