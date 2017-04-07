@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 
@@ -69,9 +72,9 @@
 
    <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav">
-     <li class="active"><a href="#">메뉴관리</a></li>
-     <li><a href="#">쿠폰관리</a></li>
-     <li><a href="#">주문확인</a></li>
+     <li><a href="<c:url value="/management"/>">메뉴관리</a></li>
+     <li class="active"><a href="<c:url value="/management/coupon"/>">쿠폰관리</a></li>
+     <li><a href="<c:url value="/management/order"/>">주문확인</a></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
@@ -84,7 +87,7 @@
  <div class="container" style="margin-top:80px">
   <div class="panel panel-default">
    <div class="panel-heading">
-    <h4><b>메뉴 관리</b></h4>
+    <h4><b>쿠폰 관리</b></h4>
    </div>
 
    <div class="container">
