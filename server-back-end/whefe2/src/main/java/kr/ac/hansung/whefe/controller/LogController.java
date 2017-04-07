@@ -10,9 +10,11 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.ac.hansung.whefe.model.Cafe_info;
 import kr.ac.hansung.whefe.service.Cafe_infoService;
@@ -38,7 +40,7 @@ public class LogController {
 			model.addAttribute("logout", "You have been logged out successfully");
 		}
 		
-		return "loginform";
+		return "web-front-end/01.First_Page";
 	}
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String loginPost() {
@@ -55,7 +57,8 @@ public class LogController {
 	}
 	
 	@RequestMapping("/login/signup") // 회원가입 창 띄울 때
-	public String signup(Model model) {
+	public String signup(Model model, HttpServletRequest request) {
+		
 		return "signup";
 	}
 	
@@ -75,5 +78,21 @@ public class LogController {
 	@RequestMapping(value="/management")
 	public String loginSuccess() {
 		return "management";
+	}
+	/*@RequestMapping("/login/duplicationCheck")
+	public @ResponseBody Object duplicationCheck(@ModelAttribute("cafe_info") Cafe_info cafe_info) throws Exception {
+
+		Cafe_info resultVO = cafe_infoService.selectAdmin(cafe_info);
+
+		return resultVO;
+	}*/
+	@RequestMapping("/android")
+	public void androidTest() {
+		System.out.println("안드로이드");
+	}
+	
+	@RequestMapping("/android2")
+	public void androidTest(HttpServletRequest request) {
+		System.out.println(request.getParameter("test"));
 	}
 }

@@ -23,5 +23,10 @@ public class Cafe_infoService {
 		return cafe_infoDao.addProduct(cafe_info);
 	}
 
+	public Cafe_info selectAdmin(Cafe_info cafe_info) {
+		System.out.println("selectAdmin!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		return null;
+	}
+
 
 }
