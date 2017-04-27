@@ -7,8 +7,16 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
+
+<!-- 메뉴 추가 checkbox disabled 우선 보류-->
+<script>
+ document.getElementById('small-hot').onchange = function() {
+  document.getElementById('small-hot-box').disabled = !this.checked;
+ };
+</script>
+
 <style>
- .option-button {
+.option-button {
   border-radius: 10px;
   width: 250px;
   height: 50px;
@@ -31,11 +39,12 @@
 
  .btn-round-sm {
   border-radius: 15px;
-}
- .price {
-    max-width: 100px;
-  }
  }
+
+ .price {
+  max-width: 100px;
+ }
+}
 </style>
 
 <body>
@@ -58,7 +67,9 @@
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><div class="user-info" style="margin-top:15px;color:#636363"><span class="glyphicon glyphicon-user"></span>&nbsp;주승권</div></li>
+     <li>
+      <div class="user-info" style="margin-top:15px;color:#636363"><span class="glyphicon glyphicon-user"></span>&nbsp;주승권</div>
+     </li>
      <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> 로그아웃</a></li>
     </ul>
    </div>
@@ -123,24 +134,49 @@
         <tbody>
          <tr>
           <th scope="row">HOT</th>
-          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
-          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
-          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
-          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+          <td>
+           <div class="checkbox price"><label><input type="checkbox" id="small-hot">
+            <input id="small-hot-box" type="text" disabled  class="form-control"></input></label></div>
+          </td>
+          <td>
+           <div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div>
+          </td>
+          <td>
+           <div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div>
+          </td>
+          <td>
+           <div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div>
+          </td>
          </tr>
          <tr>
           <th scope="row">ICE</th>
-          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
-          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
-          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
-          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+          <td>
+           <div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div>
+          </td>
+          <td>
+           <div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div>
+          </td>
+          <td>
+           <div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div>
+          </td>
+          <td>
+           <div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div>
+          </td>
          </tr>
          <tr>
           <th scope="row">단일 메뉴</th>
-          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
-          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
-          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
-          <td><div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div></td>
+          <td>
+           <div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div>
+          </td>
+          <td>
+           <div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div>
+          </td>
+          <td>
+           <div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div>
+          </td>
+          <td>
+           <div class="checkbox price"><label><input type="checkbox" value=""><input type="text" class="form-control"></input></label></div>
+          </td>
          </tr>
         </tbody>
        </table>
