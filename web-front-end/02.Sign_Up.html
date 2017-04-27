@@ -47,14 +47,8 @@
 
 						<!--<label for="">영업시간</label>-->
 						<div class="row"></div>
-						<div class="row">
-							<div class="col-md-6 col-md-6">
-								<input class="form-control" name="open-time" placeholder="영업 시작시간" type="text" />
-							</div>
-							<div class="col-md-6 col-md-6">
-								<input class="form-control" name="close-time" placeholder="영업 종료시간" type="text" />
-							</div>
-						</div>
+						<input class="form-control" type="text" name="open-time" placeholder="영업 시작시간 (00:00~24:00)" data-timepicker/>
+						<input class="form-control" name="close-time" placeholder="영업 종료시간 (00:00~24:00)" type="text" data-timepicker/>
 						<input class="form-control" name=maximum-number placeholder="카페정원 (숫자만 입력해주세요)" type="text" />
 
 						<div class="row">
@@ -69,6 +63,7 @@
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="timepicker.js"></script>
 </body>
 
 </html>
